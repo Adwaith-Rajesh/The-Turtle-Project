@@ -5,3 +5,6 @@
 
 # python related
 __pycache__
+
+# project related
+drawing.cord
