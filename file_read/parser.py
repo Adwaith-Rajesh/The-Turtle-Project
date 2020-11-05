@@ -27,7 +27,6 @@ class CordParser:
         for i, d in enumerate(self.file_data):
             nd = d.replace(" ", "").split("=")
             if nd[0] not in self.valid_chrs:
-                print(nd[0])
                 raise TypeError("Invalid character found")
             rl.append({i: nd})
         return self.data(rl)
