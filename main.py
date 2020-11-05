@@ -1,11 +1,27 @@
 from time import sleep
+import re
 
 # All the options that the software provides.
 options = ["View drawings", "Load from file", "Generate random drawings"]
 
 
 def load_from_file():
-    pass
+    pattern = re.compile(r".+\.cord")
+    print("Press Ctrl + c to go back to main menu.")
+    print()
+
+    try:
+        while True:
+            filename = input("Enter the .code file you want to run. : ")
+            if re.match(pattern, filename):
+                pass  # do something
+                break
+
+            else:
+                print("The file should be of type .code")
+
+    except KeyboardInterrupt:
+        start()
 
 
 def load_preload_drawings():
