@@ -107,7 +107,6 @@ def load_preload_drawings():
                 print("Enter a valid option.")
 
             except Exception as e:
-                print(e)
                 break
 
     except KeyboardInterrupt:
