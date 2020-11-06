@@ -71,52 +71,45 @@ def load_preload_drawings():
                     if option == 1:
                         t = turtle.Turtle()
                         flowers(t)
-                        turtle.done()
 
                     if option == 2:
                         t = turtle.Turtle()
                         modern_art(t)
-                        turtle.done()
 
                     if option == 3:
                         t = turtle.Turtle()
                         polygon(t)
-                        turtle.done()
 
                     if option == 4:
                         t = turtle.Turtle()
                         color_gamut(t)
-                        turtle.done()
 
                     if option == 5:
                         t = turtle.Turtle()
                         protractor(t)
-                        turtle.done()
 
                     if option == 6:
                         t = turtle.Turtle()
                         color_spiral(t)
-                        turtle.done()
 
                     if option == 7:
                         t = turtle.Turtle()
                         wormhole(t)
-                        turtle.done()
 
                     if option == 8:
                         t = turtle.Turtle()
                         spider_web(t)
-                        turtle.done()
+                    turtle.done()
+                    break
                 else:
                     raise ValueError
 
             except ValueError:
                 print("Enter a valid option.")
-            except turtle.Terminator:
-                pass
 
-            except tkinter.TclError:
-                pass
+            except Exception as e:
+                print(e)
+                break
 
     except KeyboardInterrupt:
         start()
