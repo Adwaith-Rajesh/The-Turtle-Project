@@ -23,6 +23,8 @@ def color_spiral(bob):
 def wormhole(bob):
     # ninja = turtle.Turtle()
     # ninja.speed(100)
+    turtle.bgcolor("black")
+    bob.pencolor("white")
     for i in range(180):
         bob.forward(200)
         bob.right(30)
@@ -55,6 +57,6 @@ def spider_web(bob):
 	    bob.right(60)
 	  side = side - 10
 t=turtle.Turtle()
-spider_web(t)
-t.speed(15)
+t.speed(200)
+wormhole(t)
 turtle.mainloop()
