@@ -64,11 +64,9 @@ def load_preload_drawings():
                 print(f"{i + 1}) {op}")
 
             try:
-                print("ASKING OPTION")
                 option = int(input(""))
                 if 0 < option <= len(preloads):
                     turtle.reset()
-                    print("Option", option)
                     if option == 1:
                         t = turtle.Turtle()
                         flowers(t)
@@ -112,7 +110,6 @@ def load_preload_drawings():
                     raise ValueError
 
             except ValueError:
-                print("SECOND VALUE ERROR")
                 print("Enter a valid option.")
             except turtle.Terminator:
                 pass
@@ -121,7 +118,6 @@ def load_preload_drawings():
                 pass
 
     except KeyboardInterrupt:
-        print("KEY BOARD")
         start()
 
 
@@ -145,7 +141,6 @@ def start():
 
             if op == 1:
                 load_preload_drawings()
-                print("BELOW")
                 break
 
             elif op == 2:
