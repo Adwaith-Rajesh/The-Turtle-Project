@@ -1,4 +1,6 @@
 import turtle
+
+
 def protractor(bob):
     # bob = turtle.Turtle()
     for angle in range(0, 360, 15):
@@ -12,7 +14,8 @@ def color_spiral(bob):
     colors = ["red", 'purple', 'blue', 'green', 'yellow', 'orange']
     # bob = turtle.Turtle()
     # bob.speed(50)
-    bob.bgcolor("black")
+    turtle.bgcolor("black")
+    # bob.bgcolor("black")
     for x in range(360):
         bob.pencolor(colors[x % 6])
         bob.width(x / 100 + 1)
@@ -35,26 +38,23 @@ def wormhole(bob):
         bob.pendown()
         bob.right(2)
 
+
 #-----------------------------------------------------------------------------------------------------
 def spider_web(bob):
-	for i in range(6):
-	  bob.forward(150)
-	  bob.backward(150)
-	  bob.right(60)
+    for i in range(6):
+        bob.forward(150)
+        bob.backward(150)
+        bob.right(60)
 
-	side = 150
-	for i in range(15):
-	  bob.penup()
-	  bob.goto(0,0)
-	  bob.pendown()
-	  bob.setheading(0)
-	  bob.forward(side)
-	  bob.right(120)
-	  for j in range(6):
-	    bob.forward(side)
-	    bob.right(60)
-	  side = side - 10
-t=turtle.Turtle()
-spider_web(t)
-t.speed(15)
-turtle.mainloop()
+    side = 150
+    for i in range(15):
+        bob.penup()
+        bob.goto(0, 0)
+        bob.pendown()
+        bob.setheading(0)
+        bob.forward(side)
+        bob.right(120)
+        for j in range(6):
+            bob.forward(side)
+            bob.right(60)
+        side = side - 10

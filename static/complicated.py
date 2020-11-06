@@ -82,7 +82,7 @@ def polygon(bob):
 #-----------------------------------------------------------------------------------------------------
 def color_gamut(bob):
     turtle.setup(width=600, height=500)
-    turtle.reset()
+    # turtle.reset()
     turtle.hideturtle()
 
     turtle.bgcolor('black')
