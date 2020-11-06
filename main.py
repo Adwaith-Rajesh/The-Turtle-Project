@@ -2,6 +2,7 @@ from time import sleep
 from fileRead.parser import CordParser
 from static.complicated import *
 from static.simple import *
+from generator.rand_gen import RandomArt
 import re
 import turtle
 import tkinter
@@ -122,7 +123,13 @@ def load_preload_drawings():
 
 
 def generate_random_drawings():
-    pass
+    try:
+        t = turtle.Turtle()
+        ra = RandomArt(t)
+        ra.start()
+        turtle.mainloop()
+    except:
+        pass
 
 
 def start():
