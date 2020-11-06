@@ -1,5 +1,6 @@
 from time import sleep
 import re
+import turtle
 
 # All the options that the software provides.
 options = ["View drawings", "Load from file", "Generate random drawings"]
@@ -14,7 +15,7 @@ def load_from_file():
         while True:
             filename = input("Enter the .code file you want to run. : ")
             if re.match(pattern, filename):
-                pass  # do something
+                t = turtle.Turtle()
                 break
 
             else:
