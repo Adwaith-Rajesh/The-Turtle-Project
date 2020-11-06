@@ -5,7 +5,6 @@ from static.simple import *
 from generator.rand_gen import RandomArt
 import re
 import turtle
-import tkinter
 
 # All the options that the software provides.
 options = ["View drawings", "Load from file", "Generate random drawings"]
