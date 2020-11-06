@@ -1,4 +1,5 @@
 from time import sleep
+from fileRead.parser import CordParser
 import re
 import turtle
 
@@ -16,6 +17,25 @@ def load_from_file():
             filename = input("Enter the .code file you want to run. : ")
             if re.match(pattern, filename):
                 t = turtle.Turtle()
+                with CordParser(filename, "r") as par:
+                    sleep(1)
+                    count = 0
+                    for i in par:
+                        if i[count][0] == "f":
+                            t.fd(int(i[count][1]))
+                        if i[count][0] == "b":
+                            t.backward(int(i[count][1]))
+                        if i[count][0] == "l":
+                            t.left(int(i[count][1]))
+                        if i[count][0] == "r":
+                            t.right(int(i[count][1]))
+                        if i[count][0] == "u":
+                            t.penup()
+                        if i[count][0] == "d":
+                            t.pendown()
+
+                        count += 1
+                turtle.mainloop()
                 break
 
             else:
